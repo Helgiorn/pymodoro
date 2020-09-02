@@ -1,13 +1,14 @@
+#!/usr/bin/env python
 from win10toast import ToastNotifier
 import time
 import datetime as dt
 
 # Collect time information
 time_now = dt.datetime.now()                                       
-time_pomodoro = 1*20                                                          
+time_pomodoro = 25*60   #Duration of working time
+delta_sec = 5*60        #Duration of break                                                        
 time_delta = dt.timedelta(0,time_pomodoro)                        
-time_future = time_now + time_delta                                     
-delta_sec = 1*20                                                           
+time_future = time_now + time_delta                                                                                                
 time_finish = time_now + dt.timedelta(0,time_pomodoro+delta_sec)
 total_pomodoros = 0
 
