@@ -4,8 +4,6 @@ import time
 import datetime as dt
 import webbrowser
 
-
-
 # Collect time information
 time_now = dt.datetime.now()                                       
 time_pomodoro = 25*60   #Duration of working time
@@ -44,7 +42,7 @@ while True:
         print('Break time!')
         pomodoro_toaster(break_message)
         #The code can take a break as well
-        time.sleep(delta_sec)
+        time.sleep(20)
     else:
         pomodoro_toaster("Break Finished.\nGo to shell to start a new Pomodoro!")
         usr_ans = input("Timer has finished. \nWould you like to start another pomodoro? \nY/N:  ")
@@ -55,6 +53,6 @@ while True:
         elif usr_ans == "N":
             print("Thank you!")
             break
-    time.sleep(60)
+    time.sleep(20)
     time_now = dt.datetime.now()
     timenow = time_now.strftime("%H:%M")
